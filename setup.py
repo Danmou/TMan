@@ -29,6 +29,7 @@ setup(
     author_email='dmrtzn@gmail.com',
     url='https://github.com/Danmou/TaskManager',
     packages=['task_manager'],
+    package_dir={'': 'src'},
     python_requires='>=3.7',
     install_requires=requirements,
     setup_requires=['pytest-runner'],
