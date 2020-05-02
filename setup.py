@@ -3,7 +3,7 @@
 #
 # (C) 2020, Daniel Mouritzen
 
-from setuptools import setup
+from setuptools import find_packages, setup
 
 requirements = [
     'appdirs',
@@ -13,9 +13,10 @@ requirements = [
 ]
 
 test_requirements = [
+    'hypothesis',
     'mypy',
-    'pyflakes',
     'pytest',
+    'pytest-cov',
     'pytest-flake8',
     'pytest-isort',
     'pytest-mypy',
@@ -28,7 +29,7 @@ setup(
     author='Daniel Mouritzen',
     author_email='dmrtzn@gmail.com',
     url='https://github.com/Danmou/TaskManager',
-    packages=['task_manager'],
+    packages=find_packages('src'),
     package_dir={'': 'src'},
     python_requires='>=3.7',
     install_requires=requirements,
