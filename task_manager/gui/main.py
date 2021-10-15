@@ -15,13 +15,17 @@ def main() -> None:
     init_logging(verbosity='DEBUG', logdir=user_log_dir(app_name))
 
     logger.debug('Initializing backend')
-    api = TaskManagerAPI(data_dir=user_data_dir(app_name), config_file=user_config_dir(app_name) + '/config.json')
+    api = TaskManagerAPI(  # noqa: F841
+        data_dir=user_data_dir(app_name), config_file=user_config_dir(app_name) + '/config.json'
+    )
 
     logger.debug('Starting UI')
     sg.theme('DarkBlue')
-    layout = [[sg.Text('Some text on Row 1')],
-              [sg.Text('Enter something on Row 2'), sg.InputText()],
-              [sg.Button('Ok'), sg.Button('Cancel')]]
+    layout = [
+        [sg.Text('Some text on Row 1')],
+        [sg.Text('Enter something on Row 2'), sg.InputText()],
+        [sg.Button('Ok'), sg.Button('Cancel')],
+    ]
     window = sg.Window('Window Title', layout)
     while True:
         event, values = window.read()

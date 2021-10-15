@@ -13,6 +13,6 @@ class TaskManagerAPI:
     data_dir: Path = attr.ib(converter=Path)
     config_file: Path = attr.ib(converter=Path)
 
-    def __attrs_post_init__(self):
+    def __attrs_post_init__(self) -> None:
         logger.info(f'Data: {self.data_dir}')
         logger.info(f'Config: {self.config_file}')

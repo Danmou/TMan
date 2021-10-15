@@ -13,9 +13,11 @@ from loguru import logger
 
 class InterceptHandler(logging.Handler):
     """
-    Handler to force stdlib logging to go through loguru
+    Handler to force stdlib logging to go through loguru.
+
     Based on https://github.com/Delgan/loguru/issues/78
     """
+
     def __init__(self, level: int = logging.NOTSET, module_levels: Optional[Mapping[str, str]] = None):
         super().__init__(level)
         self._module_levels = {} if module_levels is None else module_levels
@@ -32,7 +34,7 @@ class InterceptHandler(logging.Handler):
 
     @staticmethod
     def _get_depth() -> int:
-        """Finds out how far back to go in the stack trace to find the original source file"""
+        """Find out how far back to go in the stack trace to find the original source file."""
         try:
             frame = inspect.currentframe().f_back.f_back  # type: ignore[union-attr]
         except AttributeError:
