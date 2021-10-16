@@ -4,7 +4,7 @@ name: release & publish workflow
 
 # Controls when the action will run.
 on:
-  # Triggers the workflow on push events but only for the master branch
+  # Triggers the workflow when a version tag is pushed
   push:
     tags:
       - 'v*'
@@ -21,7 +21,7 @@ jobs:
 
     strategy:
       matrix:
-        python-versions: [3.10]
+        python-version: ["3.10"]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -42,9 +42,10 @@ jobs:
           version: ${{ steps.tag_name.outputs.current_version }}
           path: ./CHANGELOG.md
 
-      - uses: actions/setup-python@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
         with:
-          python-version: ${{ matrix.python-versions }}
+          python-version: ${{ matrix.python-version }}
 
       - name: Install dependencies
         run: |
@@ -85,5 +86,5 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           user: __token__
-          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          password: ${{ secrets.PYPI_API_TOKEN }}
           skip_existing: true
