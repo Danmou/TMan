@@ -1,6 +1,6 @@
 #  Copyright (c) 2021, Daniel Mouritzen.
 
-"""TaskManager GUI."""
+"""TaskManager CLI."""
 
 from .main import main
 

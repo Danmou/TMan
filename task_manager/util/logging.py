@@ -1,6 +1,6 @@
-# logging.py: Various logging functionality
-#
-# (C) 2019, Daniel Mouritzen
+#  Copyright (c) 2021, Daniel Mouritzen.
+
+"""Various logging functionality."""
 
 import inspect
 import logging
@@ -18,18 +18,23 @@ class InterceptHandler(logging.Handler):
     Based on https://github.com/Delgan/loguru/issues/78
     """
 
-    def __init__(self, level: int = logging.NOTSET, module_levels: Optional[Mapping[str, str]] = None):
+    def __init__(
+        self,
+        level: int = logging.NOTSET,
+        module_levels: Optional[Mapping[str, str]] = None,
+    ):
         super().__init__(level)
         self._module_levels = {} if module_levels is None else module_levels
         for mod, lev in self._module_levels.items():
             logging.getLogger(mod).setLevel(lev)
 
     def emit(self, record: logging.LogRecord) -> None:
+        """Process log record and log with loguru."""
         depth = self._get_depth()
         logger_opt = logger.opt(depth=depth, exception=record.exc_info)
-        for line in record.getMessage().split('\n'):
+        for line in record.getMessage().split("\n"):
             level = record.levelname
-            level_: Union[str, int] = int(level[6:]) if level.startswith('Level ') else level
+            level_: Union[str, int] = int(level[6:]) if level.startswith("Level ") else level
             logger_opt.log(level_, line.rstrip())
 
     @staticmethod
@@ -50,6 +55,11 @@ class InterceptHandler(logging.Handler):
 
 
 def init_logging(verbosity: str, logdir: Union[str, Path]) -> None:
+    """
+    Configure loggers according to specified verbosity level and log directory.
+
+    Should be called at the program's main entrypoint.
+    """
     # Remove default loguru logger
     logger.remove()
 
@@ -57,13 +67,13 @@ def init_logging(verbosity: str, logdir: Union[str, Path]) -> None:
     logging.basicConfig(handlers=[InterceptHandler()], level=0)
 
     # Log to stdout and logfiles
-    trace_logfile = Path(logdir) / 'trace.log'
-    info_logfile = Path(logdir) / 'info.log'
+    trace_logfile = Path(logdir) / "trace.log"
+    info_logfile = Path(logdir) / "info.log"
     kwargs: Dict[str, Any] = dict(backtrace=True, diagnose=True, enqueue=True)
-    logger.add(trace_logfile, level='TRACE', **kwargs)
-    kwargs['format'] = '<level>[{level.name[0]}] {time:HH:mm:ss}</level> {message}'
-    logger.add(info_logfile, level='INFO', **kwargs)
+    logger.add(trace_logfile, level="TRACE", **kwargs)
+    kwargs["format"] = "<level>[{level.name[0]}] {time:HH:mm:ss}</level> {message}"
+    logger.add(info_logfile, level="INFO", **kwargs)
     logger.add(sys.stdout, level=verbosity, **kwargs)
 
-    logger.debug('Logging initialized.')
-    logger.debug(f'Logging to {info_logfile} and {trace_logfile}.')
+    logger.debug("Logging initialized.")
+    logger.debug(f"Logging to {info_logfile} and {trace_logfile}.")

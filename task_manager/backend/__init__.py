@@ -1,3 +1,3 @@
-# __init__.py
-#
-# (C) 2020, Daniel Mouritzen
+#  Copyright (c) 2021, Daniel Mouritzen.
+
+"""TaskManager backend."""

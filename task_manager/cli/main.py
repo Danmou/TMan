@@ -1,15 +1,13 @@
-"""Console script for task_manager."""
+#  Copyright (c) 2021, Daniel Mouritzen.
+
+"""Main CLI entry point."""
 
 import click
 
 
 @click.command()
 def main() -> None:
-    """Main entrypoint."""
+    """Welcome to the TaskManager CLI!"""  # noqa: D400
     click.echo("TaskManager")
     click.echo("=" * len("TaskManager"))
     click.echo("Skeleton project created by Cookiecutter PyPackage")
-
-
-if __name__ == "__main__":
-    main()  # pragma: no cover

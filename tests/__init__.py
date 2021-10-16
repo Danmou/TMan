@@ -1,1 +1,3 @@
-"""Unit test package for TaskManager."""
+#  Copyright (c) 2021, Daniel Mouritzen.
+
+"""Unit tests for TaskManager."""
