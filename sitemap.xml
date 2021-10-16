@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://Danmou.github.io/TMan/</loc>
+         <lastmod>2021-10-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Danmou.github.io/TMan/api/</loc>
+         <lastmod>2021-10-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Danmou.github.io/TMan/changelog/</loc>
+         <lastmod>2021-10-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Danmou.github.io/TMan/contributing/</loc>
+         <lastmod>2021-10-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Danmou.github.io/TMan/installation/</loc>
+         <lastmod>2021-10-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Danmou.github.io/TMan/usage/</loc>
+         <lastmod>2021-10-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>
