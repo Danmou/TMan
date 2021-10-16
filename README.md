@@ -1,19 +1,19 @@
-# TaskManager
+# TMan
 
 
-[![pypi](https://img.shields.io/pypi/v/TaskManager.svg)](https://pypi.org/project/TaskManager/)
-[![python](https://img.shields.io/pypi/pyversions/TaskManager.svg)](https://pypi.org/project/TaskManager/)
-[![Build Status](https://github.com/Danmou/TaskManager/actions/workflows/dev.yml/badge.svg)](https://github.com/Danmou/TaskManager/actions/workflows/dev.yml)
-[![codecov](https://codecov.io/gh/Danmou/TaskManager/branch/main/graphs/badge.svg)](https://codecov.io/github/Danmou/TaskManager)
+[![pypi](https://img.shields.io/pypi/v/TMan.svg)](https://pypi.org/project/TMan/)
+[![python](https://img.shields.io/pypi/pyversions/TMan.svg)](https://pypi.org/project/TMan/)
+[![Build Status](https://github.com/Danmou/TMan/actions/workflows/dev.yml/badge.svg)](https://github.com/Danmou/TMan/actions/workflows/dev.yml)
+[![codecov](https://codecov.io/gh/Danmou/TMan/branch/main/graphs/badge.svg)](https://codecov.io/github/Danmou/TMan)
 
 
 
 Skeleton project created by Cookiecutter PyPackage
 
 
-* Documentation: <https://Danmou.github.io/TaskManager>
-* GitHub: <https://github.com/Danmou/TaskManager>
-* PyPI: <https://pypi.org/project/TaskManager/>
+* Documentation: <https://Danmou.github.io/TMan>
+* GitHub: <https://github.com/Danmou/TMan>
+* PyPI: <https://pypi.org/project/TMan/>
 * Free software: GPL-3.0-only
 
 

@@ -9,7 +9,7 @@ from loguru import logger
 
 
 @attr.s
-class TaskManagerAPI:
+class TManAPI:
     """Main API handle."""
 
     data_dir: Path = attr.ib(converter=Path)

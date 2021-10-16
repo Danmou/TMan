@@ -1,3 +1,3 @@
 #  Copyright (c) 2021, Daniel Mouritzen.
 
-"""Unit tests for TaskManager."""
+"""Unit tests for TMan."""

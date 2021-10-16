@@ -6,17 +6,17 @@ import PySimpleGUI as sg
 from appdirs import user_config_dir, user_data_dir, user_log_dir
 from loguru import logger
 
-from task_manager.api import TaskManagerAPI
-from task_manager.util.logging import init_logging
+from tman.api import TManAPI
+from tman.util.logging import init_logging
 
 
 def main() -> None:
     """Start GUI."""
-    app_name = "TaskManager"
+    app_name = "TMan"
     init_logging(verbosity="DEBUG", logdir=user_log_dir(app_name))
 
     logger.debug("Initializing backend")
-    api = TaskManagerAPI(  # noqa: F841
+    api = TManAPI(  # noqa: F841
         data_dir=user_data_dir(app_name), config_file=user_config_dir(app_name) + "/config.json"
     )
 

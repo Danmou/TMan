@@ -1,7 +1,7 @@
 # Usage
 
-To use TaskManager in a project
+To use TMan in a project
 
 ```
-import task_manager
+import tman
 ```

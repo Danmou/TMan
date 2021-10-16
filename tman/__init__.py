@@ -1,6 +1,6 @@
 #  Copyright (c) 2021, Daniel Mouritzen.
 
-"""TaskManager."""
+"""TMan."""
 
 __author__ = "Daniel Mouritzen"
 __email__ = "dmrtzn@gmail.com"

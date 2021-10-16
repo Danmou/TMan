@@ -9,7 +9,7 @@ You can contribute in many ways:
 
 ### Report Bugs
 
-Report bugs at https://github.com/Danmou/TaskManager/issues.
+Report bugs at https://github.com/Danmou/TMan/issues.
 
 If you are reporting a bug, please include:
 
@@ -29,13 +29,13 @@ and "help wanted" is open to whoever wants to implement it.
 
 ### Write Documentation
 
-TaskManager could always use more documentation, whether as part of the
-official TaskManager docs, in docstrings, or even on the web in blog posts,
+TMan could always use more documentation, whether as part of the
+official TMan docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
 ### Submit Feedback
 
-The best way to send feedback is to file an issue at https://github.com/Danmou/TaskManager/issues.
+The best way to send feedback is to file an issue at https://github.com/Danmou/TMan/issues.
 
 If you are proposing a feature:
 
@@ -46,13 +46,13 @@ If you are proposing a feature:
 
 ## Get Started!
 
-Ready to contribute? Here's how to set up `TaskManager` for local development.
+Ready to contribute? Here's how to set up `TMan` for local development.
 
-1. Fork the `TaskManager` repo on GitHub.
+1. Fork the `TMan` repo on GitHub.
 2. Clone your fork locally
 
     ```
-    $ git clone git@github.com:your_name_here/TaskManager.git
+    $ git clone git@github.com:your_name_here/TMan.git
     ```
 
 3. Ensure [poetry](https://python-poetry.org/docs/) is installed.
@@ -96,13 +96,13 @@ Before you submit a pull request, check that it meets these guidelines:
    your new functionality into a function with a docstring, and add the
    feature to the list in README.md.
 3. The pull request should work for Python 3.6, 3.7, 3.8 and 3.9. Check
-   https://github.com/Danmou/TaskManager/actions
+   https://github.com/Danmou/TMan/actions
    and make sure that the tests pass for all supported Python versions.
 
 ## Tips
 
 ```
-$ poetry run pytest tests/test_task_manager.py
+$ poetry run pytest tests/test_tman.py
 ```
 
 To run a subset of tests.

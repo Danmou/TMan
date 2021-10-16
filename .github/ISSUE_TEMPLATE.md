@@ -1,4 +1,4 @@
-* TaskManager version:
+* TMan version:
 * Python version:
 * Operating System:
 

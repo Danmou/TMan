@@ -1,8 +1,8 @@
 [tool]
 [tool.poetry]
-name = "TaskManager"
+name = "TMan"
 version = "0.0.0"
-homepage = "https://github.com/Danmou/TaskManager"
+homepage = "https://github.com/Danmou/TMan"
 description = "TODO"
 authors = ["Daniel Mouritzen <dmrtzn@gmail.com>"]
 readme = "README.md"
@@ -16,7 +16,7 @@ classifiers=[
     'Programming Language :: Python :: 3.10',
 ]
 packages = [
-    { include = "task_manager" },
+    { include = "tman" },
     { include = "tests", format = "sdist" },
 ]
 
@@ -98,8 +98,8 @@ doc = [
 ]
 
 [tool.poetry.scripts]
-tman = 'task_manager.cli:main'
-tman-gui = 'task_manager.gui:main'
+tman = 'tman.cli:main'
+tman-gui = 'tman.gui:main'
 
 [tool.black]
 line-length = 120

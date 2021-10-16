@@ -1,7 +1,7 @@
-site_name: TaskManager
-site_url: https://Danmou.github.io/TaskManager
-repo_url: https://github.com/Danmou/TaskManager
-repo_name: Danmou/TaskManager
+site_name: TMan
+site_url: https://Danmou.github.io/TMan
+repo_url: https://github.com/Danmou/TMan
+repo_name: Danmou/TMan
 #strict: true
 nav:
   - Home: index.md
@@ -67,11 +67,11 @@ plugins:
       lang: en
   - mkdocstrings:
       watch:
-        - task_manager
+        - tman
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/Danmou/TaskManager
+      link: https://github.com/Danmou/TMan
       name: Github
     - icon: material/email
       link: "mailto:dmrtzn@gmail.com"
