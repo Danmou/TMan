@@ -14,37 +14,53 @@ theme:
   name: material
   language: en
   #logo: assets/logo.png
+  icon:
+    repo: fontawesome/brands/github
   palette:
-    scheme: preference
-    primary: indigo
-    accent: indigo
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
   features:
     - navigation.indexes
     - navigation.instant
+    - navigation.tabs
     - navigation.tabs.sticky
+    - search.highlight
+    - search.suggest
 markdown_extensions:
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.tabbed
-  - attr_list
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.highlight:
-      linenums: false
-  - pymdownx.superfences
-  - pymdownx.inlinehilite
-  - pymdownx.details
-  - admonition
-  - toc:
+  - abbr                   # abbreviations with tooltips
+  - admonition             # info boxes/callouts
+                           # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types
+  - attr_list              # add attributes to elements to e.g. turn links into buttons
+  - meta                   # page metadata in front matter
+  - tables
+  - toc:                   # table of contents
       baselevel: 2
       permalink: true
       slugify: !!python/name:pymdownx.slugs.uslugify
-  - meta
+  - pymdownx.arithmatex:   # latex math $\int_x x^2$
+      generic: true
+  - pymdownx.caret         # ^superscript^ and ^^underline^^
+  - pymdownx.details       # collapsible blocks
+  - pymdownx.emoji:        # :smile:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:    # code highlighting
+      linenums: false
+  - pymdownx.inlinehilite  # inline highlighting `#!python int(x)`
+  - pymdownx.keys          # ++ctrl+alt+delete++
+  - pymdownx.mark          # ==highlight==
+  - pymdownx.snippets      # --8<-- "include_file.ext"
+  - pymdownx.superfences   # ```code blocks```
+  - pymdownx.tabbed        # tabbed blocks
+  - pymdownx.tilde         # ~subscript~ and ~~strikethrough~~
 plugins:
   - include-markdown
   - search:
@@ -59,9 +75,8 @@ extra:
       name: Github
     - icon: material/email
       link: "mailto:dmrtzn@gmail.com"
-  # to enable disqus, uncomment the following and put your disqus id below
-  # disqus: disqus_id
-# uncomment the following and put your google tracking id below to enable GA
-#google_analytics:
-  #- UA-xxx
-  #- auto
+copyright: Copyright &copy; 2020 - 2021 Daniel Mouritzen
+extra_javascript:
+  # Mathjax
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
