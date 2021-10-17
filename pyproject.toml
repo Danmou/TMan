@@ -98,8 +98,7 @@ doc = [
 ]
 
 [tool.poetry.scripts]
-tman = 'tman.cli:main'
-tman-gui = 'tman.gui:main'
+tman = 'tman.cli:cli'
 
 [tool.black]
 line-length = 120

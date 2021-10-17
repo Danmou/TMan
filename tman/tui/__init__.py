@@ -1,6 +1,6 @@
 #  Copyright (c) 2021, Daniel Mouritzen.
 
-"""TMan GUI (Graphical User Interface)."""
+"""TMan TUI (Terminal User Interface)."""
 
 from .main import run
 

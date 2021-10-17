@@ -10,10 +10,10 @@ from tman.api import TManAPI
 from tman.util.logging import init_logging
 
 
-def main() -> None:
+def run() -> None:
     """Start GUI."""
     app_name = "TMan"
-    init_logging(verbosity="DEBUG", logdir=user_log_dir(app_name))
+    init_logging(verbosity="DEBUG", logdir=user_log_dir(app_name), stdout=True)
 
     logger.debug("Initializing backend")
     api = TManAPI(  # noqa: F841

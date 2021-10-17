@@ -1,7 +1,7 @@
 #  Copyright (c) 2021, Daniel Mouritzen.
 
-"""TMan CLI."""
+"""TMan CLI (Command Line Interface)."""
 
-from .main import main
+from .main import cli
 
-__all__ = ["main"]
+__all__ = ["cli"]

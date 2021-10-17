@@ -54,7 +54,7 @@ class InterceptHandler(logging.Handler):
         return depth
 
 
-def init_logging(verbosity: str, logdir: Union[str, Path]) -> None:
+def init_logging(verbosity: str, logdir: Union[str, Path], stdout: bool = True) -> None:
     """
     Configure loggers according to specified verbosity level and log directory.
 
@@ -73,7 +73,8 @@ def init_logging(verbosity: str, logdir: Union[str, Path]) -> None:
     logger.add(trace_logfile, level="TRACE", **kwargs)
     kwargs["format"] = "<level>[{level.name[0]}] {time:HH:mm:ss}</level> {message}"
     logger.add(info_logfile, level="INFO", **kwargs)
-    logger.add(sys.stdout, level=verbosity, **kwargs)
+    if stdout:
+        logger.add(sys.stdout, level=verbosity, **kwargs)
 
     logger.debug("Logging initialized.")
     logger.debug(f"Logging to {info_logfile} and {trace_logfile}.")
