@@ -8,6 +8,8 @@ from loguru import logger
 from tman.api import TManAPI
 from tman.util.logging import init_logging
 
+from .app import TManTUI
+
 
 def run() -> None:
     """Start TUI."""
@@ -20,5 +22,6 @@ def run() -> None:
     )
 
     logger.debug("Starting UI")
+    TManTUI.run(title=app_name, log="textual.log", screen=False)
 
     logger.info("Finished successfully.")

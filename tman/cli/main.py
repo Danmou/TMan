@@ -25,3 +25,7 @@ def tui() -> None:
     from tman.tui import run
 
     run()
+
+
+if __name__ == "__main__":
+    cli()
